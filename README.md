@@ -19,7 +19,17 @@ De esta forma vas a poder realizar debugging mediante OpenOCD (https://openocd.o
 que el target utilice la función `printf(...)`. 
 Para lograr esto vas a tener que leer bastante documentación para configurarlo o utilizar el script 
 que desarrollamos en este repositorio denominado `add_prinft.py`.
-Si de todos modos querés hacerlo de forma manual podes empezar por acá (https://community.st.com/t5/stm32-mcus/how-to-configure-stm32-vs-code-extension-to-use-openocd/ta-p/748562)
+Si de todos modos querés hacerlo de forma manual podes empezar por acá 
+- ("Documentacion oficial (casi)") https://community.st.com/t5/stm32-mcus/how-to-configure-stm32-vs-code-extension-to-use-openocd/ta-p/748562
+- https://electronics.stackexchange.com/questions/149387/how-do-i-print-debug-messages-to-gdb-console-with-stm32-discovery-board-using-gd
+- (Los flags para gcc-arm) https://community.st.com/t5/stm32cubeide-mcus/how-to-get-arm-semihosting-to-work-on-stm32cubeide/td-p/302567
+- (Idea de configuración del launch.json) https://electronics.stackexchange.com/questions/448019/live-variable-view-using-openocd-and-vscode
+- (Semihosting at-runtime) https://electronics.stackexchange.com/questions/302193/is-there-a-way-to-check-if-semihosting-is-enabled-at-runtime
+- (Libncurses - Solo en linux) https://www.reddit.com/r/embedded/comments/1emxzkj/problems_using_stm32cubeide_on_linux/?tl=es-es  
+
+- (Una gran playlist sobre CMake + STM32 + VSCode - Esta en ruso) https://www.youtube.com/playlist?list=PL3hso3baaaPz4NgZW7kzAn0LzHdhCoQry
+
+Esta playlist me fue de gran utilidad para buscar las variables de entorno necesarias para lograr el objetivo y recorrer la configuración general del proyecto
 
 ## Ejecutando el debugger y utilizando printf
 Es importante que en el main.c agregues la biblioteca estandar para el manejo de salida del programa `#include <stdio.h>` y que definas e invoques la funcion que se va a encargar de manejar la comunicación en modo semihosting entre el target (el uC) y el host (la PC)
