@@ -10,7 +10,7 @@ Lo importante es que tengas bien configuradas las rutas del compiler y cubemx
 
 ## Modificar la variable de entorno de CMake `Configure`
 En una serie de pasos tenés que configurar el entorno en modo debug (esto añade flags de depuración al momento de compilar)
-lo que te permitirá hacer debug y agregar breakpoints mediante GBD
+lo que te permitirá hacer debug y agregar breakpoints mediante GDB
 
 ![configuracion_vscode_debug_cmake](https://github.com/user-attachments/assets/b5a7afa0-50f0-4265-86bb-b8645b45a178)
 
